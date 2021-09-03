@@ -1,0 +1,12 @@
+version: "2.2"
+services:
+  bookmarks:
+    image: bookmarks
+    build: .
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    command: python3 manage.py runserver 0.0.0.0:8000
