@@ -9,4 +9,4 @@ services:
       - "8000:8000"
     volumes:
       - .:/code
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver_plus --cert-file cert.crt 0.0.0.0:8000
