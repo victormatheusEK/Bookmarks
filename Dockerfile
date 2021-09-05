@@ -9,4 +9,5 @@ ENV TZ="America/Sao_Paulo"
 COPY . /code
 WORKDIR /code
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt && \
+    python3 manage.py migrate
