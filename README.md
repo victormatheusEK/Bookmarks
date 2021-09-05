@@ -7,3 +7,8 @@ After installing on your machine, rename the .env.example to .env and set your e
 ```sh
 $ docker-compose up
 ```
+
+### Social Networks Authentication
+To be able to login using your social networks account, you'll nedd to edit your /etc/hosts file and set
+it to mysite.com instead of localhost. That is because the social_django app needs a domain name and an TLS connection.
+After editing yout /etc/hosts file, you are ready to go.

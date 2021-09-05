@@ -118,7 +118,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
+MEDIA_ROOT = Path(BASE_DIR).joinpath('media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -135,7 +135,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
-    'social_core.backends.facebook.FacebookOAuth2'
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
 
 # Social Authentication
